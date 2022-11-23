@@ -1,6 +1,6 @@
 ﻿namespace Packt.Shared;
 
-public class Person
+public partial class Person
 {
     public string? Name;
     public DateTime DateOfBirth;
@@ -27,8 +27,27 @@ public class Person
      }
 
      public (string, int) GetFruit()
-{
-   return ("Apples", 5);
-}
+     {
+      return ("Apples", 5);
+     }
+     public string SayHello()
+     {
+         return $"{Name} says 'Hello'";
+     }
+     public string SayHello(string name)
+     {
+      return $"{Name} says 'Hello' {name}!";
+     }
+     public string OptionalParameters(
+      string command = "Run",
+      double number = 0.0,
+      bool active = true
+     )
+     {
+         return string.Format(
+            "command is {0}, number is {1}, active is {2}", command, number, active
+         );
+     }
+
 }
 

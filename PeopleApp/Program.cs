@@ -63,4 +63,19 @@ arg2: gunny.Instantianted);
 (string, int) fruit = bob.GetFruit();
 WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
 
+WriteLine(bob.SayHello());
+WriteLine(bob.SayHello("Babken"));
+WriteLine(bob.OptionalParameters(active:false, command: "rest", number: 5));
 
+var sam = new Person
+{
+    Name = "Sam",
+    DateOfBirth =  new DateTime(1972,1,27)
+};
+WriteLine(sam.Origin);
+WriteLine(sam.Greeting);
+WriteLine(sam.Age);
+sam.FavoriteIceCream = "Choclate Fudge";
+WriteLine($"Sam's favorite ice-creme flavor is {sam.FavoriteIceCream}");
+sam.FavoritePrimaryColor = "Red";
+WriteLine($"Sam's favorite primary color is {sam.FavoritePrimaryColor}");
